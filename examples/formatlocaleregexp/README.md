@@ -97,6 +97,22 @@ A következő metódusok közvetlenül hívhatók `String` objektumokon, nem kö
 
 Hozzunk létre egy reguláris kifejezéseken alapuló validátor osztályt a gyakrabban előforduló validálási feladatokra.
 
+A `validateEmail()` metódus olyan stringet fogadjon csak el, ami e-mail formátumú. Az e-mail formátumot a következőképp
+definiáljuk:
+
+* Van benne `@` karakter
+* A `@` előtt elfogadható kis- és nagybetű, számjegy, aláhúzásjel, kötőjel és pont
+* A `@` utáni rész a domain
+* A domain bármennyi ponttal elválasztott tagot tartalmazhat
+* Az utolsó tagon kívül szerepelhet kis- és nagybetű, számjegy, aláhúzásjel és kötőjel
+* Az utilsó tag 2-4 darab kis- vagy nagybetűt tartalmazhat
+
+A `validateAcademicYear()` metódus két évszámot vár kötőjellel elválasztva. Az évszámnak 2000 és 2099
+között bármi elfogadható. Nem kell figyelni arra, hogy az első kisebb legyen, mint a második.
+
+A `validateYear()` metódus 2000 és 2999 bármilyen évszámot elfogadhat.
+
+
 ### Hibakezelés
 
 `null` vagy üres string, illetve évszám validálás esetén a `null` érték dobjon `IllegalArgumentException`-t

@@ -23,7 +23,7 @@ public class RegexpValidator {
         return academicYear.matches(ACADEMIC_YEAR_PATTERN);
     }
 
-    public boolean validateYearString(String yearString) {
+    public boolean validateYear(String yearString) {
         if (isEmpty(yearString)) {
             throw new IllegalArgumentException("Empty string passed!");
         }

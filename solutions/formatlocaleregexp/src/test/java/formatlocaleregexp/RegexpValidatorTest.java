@@ -27,7 +27,7 @@ public class RegexpValidatorTest {
         exception.expect(IllegalArgumentException.class);
         exception.expectMessage("Empty string passed!");
         // When
-        new RegexpValidator().validateYearString(null);
+        new RegexpValidator().validateYear(null);
     }
 
     @Test
@@ -49,10 +49,10 @@ public class RegexpValidatorTest {
     }
 
     @Test
-    public void testValidateYearString() {
+    public void testValidateYear() {
 
-        assertThat(new RegexpValidator().validateYearString("2014"), is(true));
-        assertThat(new RegexpValidator().validateYearString("3014"), is(false));
-        assertThat(new RegexpValidator().validateYearString("896"), is(false));
+        assertThat(new RegexpValidator().validateYear("2014"), is(true));
+        assertThat(new RegexpValidator().validateYear("3014"), is(false));
+        assertThat(new RegexpValidator().validateYear("896"), is(false));
     }
 }
